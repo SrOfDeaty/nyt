@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Pokemon Solid';
-    src: url('images/Pokemon Solid.ttf') format('woff2'); /* Caminho para o arquivo */
+    src: url('images/Pokemon Solid.ttf') format('woff2'); 
 }
 
 :root {
@@ -85,7 +85,7 @@ body {
     perspective: 1000px;
 }
 
-/* Flip Card Container */
+
 .flip-card {
     position: relative;
     width: 100%;
@@ -121,13 +121,13 @@ body {
     overflow: hidden;
 }
 
-/* Frente do card (foto) */
+
 .flip-card-front {
     background-color: var(--soft-white);
     color: black;
 }
 
-/* Verso do card (mensagem) */
+
 .flip-card-back {
     background: linear-gradient(135deg, var(--pastel-purple) 0%, #e6d9ff 100%);
     color: var(--deep-purple);
@@ -138,7 +138,7 @@ body {
     justify-content: center;
 }
 
-/* Foto do card ocupando todo o espaço */
+
 .card-photo {
     position: absolute;
     top: 0;
@@ -149,7 +149,7 @@ body {
     z-index: 1;
 }
 
-/* Label do card (texto que aparece embaixo da foto) */
+
 .card-label {
     position: relative;
     z-index: 2;
@@ -188,7 +188,7 @@ body {
     opacity: 0.7;
 }
 
-/* Texto da mensagem no verso */
+
 .message-text {
     font-size: 1.2rem;
     line-height: 1.6;
@@ -204,7 +204,7 @@ footer {
     opacity: 0.7;
 }
 
-/* Responsividade */
+
 @media (max-width: 600px) {
     .title {
         font-size: 2.5rem;
