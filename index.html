@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="icon" href="images/cina.png" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nytsuo Fodona</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Quicksand:wght@300;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-overlay"></div>
+    
+    <div class="container">
+        <header>
+            <h1 class="title">Nytsuo</h1>
+            <div class="main-illustration">
+                <img src="images/love.png" alt="Cinnamoroll e Espeon" class="floating">
+            </div>
+        </header>
+
+        <main>
+            <section class="intro">
+                <p>Nytsuo moggadora de betinhas.</p>
+            </section>
+
+            <div class="interactive-grid">
+               
+                <div class="flip-card" onclick="flipCard(this)">
+                    <div class="flip-card-inner">
+                        
+                        <div class="flip-card-front">
+                            <img src="images/hug.png" alt="Abraço" class="card-photo">
+                            <span class="card-label">Olha você</span>
+                        </div>
+                        
+                        <div class="flip-card-back">
+                            <img src="images/screenshot_6.png" alt="Descrição da imagem" class="back-image">
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="flip-card" onclick="flipCard(this)">
+                    <div class="flip-card-inner">
+                        
+                        <div class="flip-card-front">
+                            <div class="photo-placeholder">
+                                <p>Sua Foto Aqui ❤️</p>
+                                <img src="images/espeon_solo.png" alt="Descrição da imagem" class="card-photo">
+                            </div>
+                            
+                        </div>
+                       
+                        <div class="flip-card-back">
+                           <img src="images/Screenshot_9.png" alt="Descrição da imagem" class="back-image">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="flip-card" onclick="flipCard(this)">
+                    <div class="flip-card-inner">
+                        
+                        <div class="flip-card-front">
+                            <div class="photo-placeholder">
+                                <p>Sua Foto Aqui ❤️</p>
+                                <img src="images/cinnamoroll_new.png" alt="Descrição da imagem" class="card-photo">
+                            </div>
+                            
+                        </div>
+                       
+                        <div class="flip-card-back">
+                           <img src="images/screenshot_7.png" alt="Descrição da imagem" class="back-image">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card" onclick="flipCard(this)">
+                    <div class="flip-card-inner">
+                        
+                        <div class="flip-card-front">
+                            <div class="photo-placeholder">
+                                <p>Sua Foto Aqui ❤️</p>
+                                <img src="images/espeon_new.png" alt="Descrição da imagem" class="card-photo">
+                            </div>
+                            
+                        </div>
+                       
+                        <div class="flip-card-back">
+                           <img src="images/screenshot_8.png" alt="Descrição da imagem" class="back-image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Eu fiz com carinho tá.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>   
+ <html>
+  <head>
+    <title>Play audio</title>
+  </head>
+  <body onload="addEvent()">
+
+    <script>
+      function addEvent(){
+         document.body.addEventListener("click", play)
+       }
+      function play() {
+        var audio = document.getElementById("audio");
+        audio.play();
+      }
+</script>
+
+    <audio loop preload="auto" id="audio">
+  <source src="images/leaozinho.mp3" type="audio/mpeg">
+</audio>
+<script>
+  var audio = document.getElementById("audio");
+  audio.volume = 0.08;
+</script>
+<input type="checkbox" autocomplete="off" id="overlay-toggle">
+<div class="overlay fullscreen">
+    <label for="overlay-toggle" onclick="audioPlay(); ">
+        <span class="overlayno-hover hover" style="font-family: monospace; font-size: 0.6em;"></span>
+        <span class="overlayhover hover" style="font-family: monospace; font-size: 0.6em;">click here</span>         
+        
+      </label>
+
+<script>
+  var rev = "fwd";
+  function titlebar(val){
+      var msg  = "nytsuo";
+      var res = "";
+      var speed = 100;
+      var pos = val;
+      msg = ""+msg+"";
+      var le = msg.length;
+      if(rev == "fwd"){
+          if(pos < le){
+              pos = pos+1;
+              scroll = msg.substr(0,pos);
+              document.title = scroll;
+              timer = window.setTimeout("titlebar("+pos+")",speed);
+          }
+          else {
+              rev = "bwd";
+              timer = window.setTimeout("titlebar("+pos+")",speed);
+          }
+      }
+      else {
+          if(pos > 0) {
+              pos = pos-1;
+              var ale = le-pos;
+              scrol = msg.substr(ale,le);
+              document.title = scrol;
+              timer = window.setTimeout("titlebar("+pos+")",speed);
+          }
+          else {
+              rev = "fwd";
+              timer = window.setTimeout("titlebar("+pos+")",speed);
+          }
+      }
+  }
+  titlebar(0);
+  
+  </script>     
+</body>
+</html>
